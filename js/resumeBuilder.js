@@ -50,7 +50,7 @@ var work = {
     "description": "Summer internship on an offshore drilling rig in the North Sea."
   }
   ]
-};
+}
 
 var projects = {
   "projects": [
@@ -59,12 +59,8 @@ var projects = {
     "dates": "December 2015",
     "description": "Creating an online resume as part or the Udacity Nanodegree. Includes Javascript",
     "images": [
-    {
-      "resumeimg1" = "images/197x148.gif"
-    },
-    {
-      "resumeimg2" = "images/197x148.gif"
-    }
+      "resumeimg1": "images/197x148.gif",
+      "resumeimg2": "images/197x148.gif"
     ]
   },
   {
@@ -72,31 +68,29 @@ var projects = {
     "dates": "January 2016",
     "description": "A future project that I'll be working on in the future. Very futuristic.",
     "images": [
-    {
-      "futurepic1" = "images/197x148.gif"
-    },
-    {
-      "futurepic2" = "images/197x148.gif"
-    }
+      "futurepic1": "images/197x148.gif",
+      "futurepic2": "images/197x148.gif"
     ]
   }
   ]
-};
+}
 
 var bio = {
-  "name" : formattedName,
-  "role" : formattedRole,
+  "name" : "Christian",
+  "role" : "Web Developer",
+  "welcomeMessage" : "Welcome to my resume. I am pleased to have you here. Have a look around and let me know if I can help you",
   "contacts" : {
-    "mobile" : formattedMobile,
-    "email" : formattedEmail,
+    "mobile" : "+47 977 80 867",
+    "email" : "christianborre@gmail.com",
     "github" : "leBoer",
     "twitter" : "@christian7567",
     "location" : "Norway"
-  },
-  "welcomeMessage" : formattedWelcome,
-  "skills" : formattedSkills,
-  "image" : formattedbioPic
-};
+  }
+  "skills": [
+  "JS", "HTML", "CSS", "Git"
+  ],
+  "bioPic": "images/me.jpg"
+}
 
 var education = {
   "schools": [
@@ -104,32 +98,40 @@ var education = {
     "name": "NTNU",
     "city": "Trondheim",
     "degree": "Masters",
-    "major": ["Marine Technology"]
+    "majors": ["Marine Technology"],
+    "dates": "August 2004 - May 2011",
+    "url": "www.NTNU.edu"
   },
   {
     "name": "Nanyang",
     "city": "Singapore",
     "degree": "Under Grad Subjects",
-    "major": ["Marine Technology"]
+    "majors": ["Marine Technology"],
+    "dates": "August 2009 - May 2010",
+    "url": "www.NTU.edu.sg"
+  }
+  ],
+  "onlineCourses": [
+  {
+    "title": "Frontend Nanodegree",
+    "school": "Udacity",
+    "dates": "October 2015 - Present",
+    "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
   }
   ]
-};
+}
 
-work.position = "Engineer";
-work.employer = "Teekay";
-work.years = "4.5";
-work.location = "Stavanger";
+//work.position = "Engineer";
+//work.employer = "Teekay";
+//work.years = "4.5";
+//work.location = "Stavanger";
 
-education["name"] = "NTNU";
-education["years"] = "5 years";
-education["city"] = "Trondheim";
+//education["name"] = "NTNU";
+//education["years"] = "5 years";
+//education["city"] = "Trondheim";
 
-bio["email"] = formattedEmail;
+//bio["email"] = formattedEmail;
 
-// $("#header").append(work["position"]);
-// $("#header").append(education.name);
-// $("#header").append(bio.name);
-// $("#header").append(bio.role);
 // $("#header").append(bio.email);
 // $("#header").append(bio.mobile);
 // $("#header").append(bio.image);
