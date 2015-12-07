@@ -132,7 +132,7 @@ var education = {
 
 //bio["email"] = formattedEmail;
 
-// $("#header").append(bio.email);
+// $("#header").append(bio.name);
 // $("#header").append(bio.mobile);
 // $("#header").append(bio.image);
 // $("#header").append(bio.welcomeMessage);
