@@ -137,19 +137,23 @@ if(bio.skills.length > 0){
   $("#skills").append(formattedSkill);
 }
 
-work.jobs.forEach(function(job) {
-  $("#workExperience").append(HTMLworkStart);
-  var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-  var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
-  $(".work-entry:last").append(formattedWorkEmployer.concat(formattedWorkTitle));
-  var formattedLocation = HTMLworkLocation.replace("%data%",job.location);
-  $(".work-entry:last").append(formattedLocation);
-  var formattedDates = HTMLworkDates.replace("%data%",job.dates);
-  $(".work-entry:last").append(formattedDates);
-  var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
-  $(".work-entry:last").append(formattedDescription);
+function displayWork() {
+  work.jobs.forEach(function(job) {
+    $("#workExperience").append(HTMLworkStart);
+    var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+    var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
+    $(".work-entry:last").append(formattedWorkEmployer.concat(formattedWorkTitle));
+    var formattedLocation = HTMLworkLocation.replace("%data%",job.location);
+    $(".work-entry:last").append(formattedLocation);
+    var formattedDates = HTMLworkDates.replace("%data%",job.dates);
+    $(".work-entry:last").append(formattedDates);
+    var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
+    $(".work-entry:last").append(formattedDescription);
+  }
+);
+}
 
-});
+displayWork();
 
 // $("#workExperience").append(work.jobs.employer);
 //work.position = "Engineer";
