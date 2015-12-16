@@ -155,11 +155,12 @@ function displayWork() {
 
 displayWork();
 
-// $("#workExperience").append(work.jobs.employer);
-//work.position = "Engineer";
-//work.employer = "Teekay";
-//work.years = "4.5";
-//work.location = "Stavanger";
+//Collecting Click Locations
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y = loc.pageY;
+  logClicks(x,y);
+});
 
 //education["name"] = "NTNU";
 //education["years"] = "5 years";
