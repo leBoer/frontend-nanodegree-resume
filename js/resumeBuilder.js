@@ -90,7 +90,7 @@ var education = {
   'schools': [
   {
     'name': 'NTNU',
-    'city': 'Trondheim',
+    'location': 'Trondheim',
     'degree': 'Masters',
     'majors': ['Marine Technology'],
     'dates': 'August 2004 - May 2011',
@@ -98,7 +98,7 @@ var education = {
   },
   {
     'name': 'Nanyang',
-    'city': 'Singapore',
+    'location': 'Singapore',
     'degree': 'Under Grad Subjects',
     'majors': ['Marine Technology'],
     'dates': 'August 2009 - May 2010',
@@ -173,16 +173,18 @@ projects.display = function() {
     var formattedProjectDates = HTMLprojectDates.replace('%data%', projects.projects[i].dates);
     var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[i].description);
     $('#projects').append(HTMLprojectStart);
-    $('#projects').append(formattedProjectTitle);
-    $('#projects').append(formattedProjectDates);
-    $('#projects').append(formattedProjectDescription);
+    $('.project-entry:last').append(formattedProjectTitle);
+    $('.project-entry:last').append(formattedProjectDates);
+    $('.project-entry:last').append(formattedProjectDescription);
 
+//Adds the images
     for (var k = 0; k < projects.projects[i].images.length; k++) {
-      // projects.projects[i].images[k]
       var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[i].images[k])
-      $('#projects').append(formattedProjectImage);
+      $('.project-entry:last').append(formattedProjectImage);
     };
   };
 }
 
 projects.display();
+
+$('#mapDiv').append(googleMap);
