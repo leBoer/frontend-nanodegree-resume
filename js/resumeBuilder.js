@@ -126,7 +126,7 @@ var education = {
     'name': 'NTNU',
     'location': 'Trondheim',
     'degree': 'Masters',
-    'majors': ['Marine Technology'],
+    'majors': ['Marine Technology', 'Engineering'],
     'dates': 'August 2004 - May 2011',
     'url': 'www.NTNU.edu'
   },
